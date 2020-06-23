@@ -2,6 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 using TailSpin.SpaceGame.Web;
@@ -46,7 +47,13 @@ namespace SpaceWebTests
             IEnumerable<Score> scores = scoresTask.Result;
 
             // Verify that each score's game region matches the provided game region.
-            //Assert.That(scores, Is.All.Matches<Score>(score => score.GameRegion == gameRegion));
+            // Assert.That(scores, Is.All.Matches<Score>(score => score.GameRegion == gameRegion));
+        }
+
+        [TestMethod]
+        public void TestMethod2()
+        {
+            Assert.AreEqual(true, false);
         }
     }
 }
